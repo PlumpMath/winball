@@ -3,7 +3,7 @@
 ## windows.js 
 
 
-### dependency 
+### dependencies 
 
  - [msgpack.js](http://msgpack.org/) (ver:1.05)
  
