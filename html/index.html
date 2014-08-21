@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <a href="index.html" target="_blank">new window</a>
+    </div>
+    <div>
+      <p>
+        <label for="txtchannel">channel : </label>
+        <input id="txtchannel" type="text" />
+        <input id="btnsubscribe" type="button" value="subscribe" /> 
+        <input id="btnunsubscribe" type="button" value="unsubscribe" /> 
+        <input id="btnsubscriptions" type="button" value="subscriptions" /> 
+      </p>
+    </div>
+    <div>
+      <p>
+        <label for="txtdata">publish data on <span id="chan" style="background-color: yellow;"></span>
+        </label> 
+        <input id="txtdata" type="text" />
+        <input id="btnpublish" type="button" value="publish" /> 
+      </p>
+    </div>
+    <div id="out"></div>
+    <script src="msgpack.js"></script>
+    <script src="windows.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
