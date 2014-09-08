@@ -2,11 +2,6 @@
 
 ## windows.js 
 
-
-### dependencies 
-
- - [msgpack.js](http://msgpack.org/) (ver:1.05)
- 
 ### usage
 
 ```javascript

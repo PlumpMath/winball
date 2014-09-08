@@ -1,3 +1,6 @@
+//
+// v0.1
+//
 ;;
 this.windows || (function(scope){
 
@@ -16,7 +19,7 @@ this.windows || (function(scope){
       //add pattern matching for subscriptions
       if (_subscriptions[key] != null){
         if (newValue != null){
-          var val = msgpack.unpack(JSON.parse(newValue));
+          var val = JSON.parse(newValue);
           _subscriptions[key](val.data, storageEvent);
         }
       }
@@ -34,7 +37,7 @@ this.windows || (function(scope){
     };
 
     var publish = function(channel, data){
-      var val = msgpack.pack({ data: data, time: new Date().getTime() });
+      var val = { data: data, time: new Date().getTime() };
       //fires channel changed event
       localStorage.setItem(prepend + channel, JSON.stringify(val));
       //removes data from storage to preserve space 
@@ -47,6 +50,7 @@ this.windows || (function(scope){
     };
 
     return {
+      version : "0.1", 
       publish : publish,
       subscribe : subscribe,
       subscriptions : subscriptions,
